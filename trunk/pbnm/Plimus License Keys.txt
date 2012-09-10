@@ -1,0 +1,5 @@
+URL to get new licenses:
+http://monitor.binarysolutions.biz/process_payment?plimusId=<CUSTOM_FIELD1>
+
+URL to revoke licenses: 
+http://monitor.binarysolutions.biz/revoke_license?identifier=<LICENSE_KEYS>

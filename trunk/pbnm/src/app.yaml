@@ -1,0 +1,63 @@
+application: vb02-something
+version: 3
+runtime: python
+api_version: 1
+
+skip_files:
+- ^(.*/)?app\.yaml
+- ^(.*/)?app\.yml
+- ^(.*/)?index\.yaml
+- ^(.*/)?index\.yml
+- ^(.*/)?#.*#
+- ^(.*/)?.*~
+- ^(.*/)?.*\.py[co]
+- ^(.*/)?.*/RCS/.*
+- ^(.*/)?.*/CVS/.*
+- ^(.*/)?\..*
+- ^(.*/)?.*\.bak$
+
+inbound_services:
+ - mail
+
+handlers:
+- url: /_ah/mail/monitor@.*vb02-something\.appspotmail\.com
+  script: /plimusmonitor/process_email.py
+  login: admin
+  
+- url: /plimusmonitor/launch_scrapers
+  script: plimusmonitor/launch_scrapers.py
+  login: admin
+  
+- url: /plimusmonitor/scrape
+  script: plimusmonitor/scrape.py
+  login: admin
+  
+- url: /plimusmonitor/login
+  script: plimusmonitor/login.py
+  login: admin
+    
+- url: /process_payment
+  script: plimusmonitor/process_payment.py
+  
+- url: /revoke_license
+  script: plimusmonitor/revoke_license.py
+  
+- url: /rss/.*
+  script: plimusmonitor/rss.py  
+
+
+- url: /email_extractor/launch_extractors
+  script: email_extractor/launch_extractors.py
+  login: admin
+  
+- url: /email_extractor/populate
+  script: email_extractor/populate.py
+  login: admin
+  
+- url: /email_extractor/extract
+  script: email_extractor/extract.py
+  login: admin
+  
+- url: /email_extractor/submit
+  script: email_extractor/submit.py
+  login: admin
