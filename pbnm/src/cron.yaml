@@ -1,0 +1,8 @@
+cron:
+- description: Launch scrapers
+  url: /plimusmonitor/launch_scrapers
+  schedule: every 5 minutes
+  
+- description: Extract email addresses
+  url: /email_extractor/launch_extractors
+  schedule: every 5 minutes

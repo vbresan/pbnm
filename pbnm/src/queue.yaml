@@ -1,0 +1,16 @@
+queue:
+- name: default
+  rate: 5/s
+  
+- name: scrape
+  rate: 5/s
+  
+- name: login
+  rate: 5/s
+
+
+- name: extract
+  rate: 5/s
+  
+- name: submit
+  rate: 5/s

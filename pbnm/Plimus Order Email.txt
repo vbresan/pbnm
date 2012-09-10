@@ -1,0 +1,25 @@
+From (email):  
+<DEVELOPER_SALES_EMAIL>
+
+Email subject:
+<PRODUCT_NAME> <CONTRACT_NAME> Order Information
+
+Email body: 
+Dear <CUSTOMER_FIRST_NAME>,
+
+Thank you for your purchase of:
+
+<PRODUCT_NAME> <CONTRACT_NAME>
+
+Your BuyNow Monitor RSS Feed is available at the following URL:
+http://monitor.binarysolutions.biz/rss/<LICENSE_KEYS>
+
+You can subscribe to it in your favorite RSS reader. If you have no preferences, we would recommend Google Reader available here:
+http://reader.google.com/
+
+
+Should you have any questions please contact us at: <DEVELOPER_SUPPORT_EMAIL>
+
+Sincerely,
+
+<DEVELOPER_NAME>
